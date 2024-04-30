@@ -1,1 +1,24 @@
 /* CSS 선택자(Selector) */
+* {
+  color: red;
+
+}
+body{
+  background-color: gray;
+}
+p {
+  color: blue;
+}
+.note {
+  color: green;
+}
+#EUID {
+  color: blueviolet;
+}
+a[href]{
+  color: yellow;
+}
+/*
+ * => 전체선택자
+ [] -> 속성값에 css를 줄때 사용
+*/
