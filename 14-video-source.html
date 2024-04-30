@@ -1,1 +1,24 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>비디오 관련 요소</title>
+</head>
+<body>
+  
+    <video class="fullsize" poster="video/poster.jpg" controls autoplay muted>
+      <source src="video/google-developer-stories.mp4" type="video/mp4" />
+      <source src="video/google-developer-stories.mov" type="video/mov" />
+      <source src="video/google-developer-stories.ogg" type="video/ogg" />
+      <source src="video/google-developer-stories.webm" type="video/webm" />
+      <track src="video/google-developer-stories-subtitles-en.vtt" 
+             kind="captions" srclang="en" label="English Caption" />
+    </video>   
+  <!-- 
+    video 태그안에 poster를 설정하면 비디오 이미지만 뜸
+    track => 자막관련 요소
+    controls 를 넣으면 비디오 재생 , autoplay자동 재생 을 할려면 muted상태(음소거)
+   -->
+</body>
+</html><!-- HTML 코드를 작성해 주세요. -->
