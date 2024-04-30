@@ -1,1 +1,76 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>폼 관련 요소</title>
+</head>
+<body>
+  <!--
+    검색어 입력 예시
+  -->
+<form action="https://formspree.io/seulbinim@gmail.com" method="POST" class="search-form" id="search-form">
+  <fieldset>
+    <legend>검색</legend>
+    <div class="searchform-wrapper">
+      <div class="form-input-wrapper">
+        <label for="search" class="a11yHidden form-input-label">검색어</label>
+        <input type="search" id="search" required placeholder="검색어를 입력하세요." name="search" class="form-input" />
+      </div>
+      <button type="submit" class="searchform-button" form="search-form">검색</button>
+    </div>
+  </fieldset>
+</form>
+<!-- form은 상호작용이 가능하다
+    form은 전용 그룹이 필요하다 action = 폼관련 영역애 서버로 전송되는 서버요소
+    method = 포스트 요소 (잘 찾아 보기)
+    <fieldset> => div와 비슷한 그러나 div와는 다르게 의미가 있는것을 묶는 태그이다 => <legend> 태그를 넣어줘야 한다
+      label 과 input => 입력서식 -> div로 묶었음(부품으로서 관리 하기위해)
+      label은 이름을 붙이는 것 그리고 폼은 1:1로 label과 iput을 매치 해야한다 for속성 부여
+      input => type속성을 통해 여러 모양을 만들 수 있다 id 속성 부여, required placeholder 같이 속성 부여
+      button은 type을 가진다 type을 생략하면 기본적으로 submit(전송)이다 -> form태그에 id를 넣고 그후 button태그에 form요소를 넣어 id와 같은 이름으 ㄹ넣으면 form태그와 button이 연결된다
+ -->
+ <br />
+ <!-- 체크 박스 예시 -->
+<div class="form-checkbox-wrapper">
+  <input class="form-checkbox" type="checkbox" id="secretWritings" name="secretWritings" />
+  <label for="secretWritings" class="form-checkbox-label">
+    비밀글로 등록하기
+  </label>
+</div>
+<br />
+<!-- 라디오 버튼 예시 -->
+<p id="euid-course">이듬 교육을 다시 수강할 의향이 있으신가요?</p>
+<div aria-labelledby="euid-course" role="group">
+  <div class="form-radio-wrapper">
+    <input type="radio" id="euid-course-yes" value="Y" name="euidCourse" class="form-radio" />
+    <label for="euid-course-yes" class="form-radio-label">예</label>
+  </div>
+  <div class="form-radio-wrapper">
+    <input type="radio" id="euid-course-no" value="N" name="euidCourse" class="form-radio" />
+    <label for="euid-course-no" class="form-radio-label">아니오</label>
+  </div>
+</div>
+<br />
+<!-- 셀렉트 박스 예시 -->
+<select aria-label="언어 선택" name="selectLanguage" class="select-language__select">
+  <option value="korean">한국어</option>
+  <option value="english">영어</option>
+</select>
+<br />
+<!-- 텍스트 에어리어 예시 (여러줄 예시)-->
+<div class="form-textarea-wrapper">
+  <label for="message" class="form-textarea-label">Message</label>
+  <textarea id="message" name="message" cols="20" rows="10" placeholder="Put your extra message" class="form-textarea"></textarea>
+</div>
+<!-- 
+  라디오 버튼과 체크버튼의 차이점
+  라디오 버튼은 둘중 하나만 선택 가능하다 , 체크박스는 다중 선택이 가능하다
+  셀렉트 박스에서 언어는 option태그로 해야하며 arial-label을 넣으면 1:1(label, input)을 안해도 된다
+  textarea태그 -> 여러줄 글상자를 만들 수 있다
+  
+
+
+ -->
+</body>
+</html>

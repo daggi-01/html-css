@@ -1,1 +1,49 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>테이블관련 요소</title>
+</head>
+<body>
+  <table>
+    <caption>
+      테이블의 제목
+    </caption>
+  <thead>
+    <tr>
+      <th scope="row">제목셀</th>
+      <td>내용셀</td>
+    </tr>
+    </thead>
+    <tfoot>
+      <th scope="row">테이블의 바닥글</th>
+      <td>테이블의 바닥글</td>
+    </tfoot>
+    <tbody>
+    <tr>
+      <th scope="row">제목셀</th>
+      <td>내용셀</td>
+    </tr>
+    <tr>
+      <th scope="row">제목셀</th>
+      <td>내용셀</td>
+    </tr>
+  </tbody>
+  </table>
+    <!-- tr => 행
+        th => 제목
+        td => 내용
+        thead => 첫글
+        tfoot => 마지막글
+        th 안에 scope => 행렬 방향 조절
+        option마우스클릭 => 같은것 동시 입력
+        scope = row(), col()
+        headers 제목들, id = 유니크한 id -> scope 보다 더 권장
+        
+
+
+    -->
+  
+</body>
+</html>
