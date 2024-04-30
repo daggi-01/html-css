@@ -1,1 +1,28 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Picture, source요소</title>
+</head>
+<body>
+  <picture>
+    <source srcset="./images/netflix@1.webp 1x,  ./images/netflix@2x.webp 2x" />
+    <img src="./images/netflix.png" alt="넷플릭스" />
+  </picture>
+  <hr />
+  <picture>
+    <source srcset="./images/small-550.jpg 550w, ./images/medium-1024.jpg 1024w, ./images/large-1600.jpg 1600w" sizes="(max-width: 800px) 50vw, 600px" /> 
+    <img src="./images/image-src.png" alt="" />
+  </picture>
+  <!-- 
+    picture태그는 source와 img를 가져야한다(source는 생략 가능)
+    <source srcset(자동완성이 안되니깐 src모드에서 파일명 설정) >
+    picture에 srcset으로 webp포멧으로 했을때 지원 안되는건 png로 대체된다
+    개발자 도구로 확인 할 수 있다
+    최근엔 svg이미지가(백터)활발 하다
+    550w -> w는 찾아보자(최근 잘 사용하는 단위) vw=%
+    sizes속성은 뷰표트의 사이즈를 고정 해서 보여준다
+   -->
+</body>
+</html><!-- HTML 코드를 작성해 주세요. -->
